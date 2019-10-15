@@ -5,11 +5,13 @@ public class Limb : MonoBehaviour
 	public Limb child;
 	public Vector3 jointLocation;
 	public Vector3 jointOffset;
-	public float angle;
 	public float lastAngle;
+	public float angle;
 	public Vector3[] limbVertexLocations;
 	public Material material;
 	public Mesh mesh;
+
+	public Color color;
 
 	void Start()
 	{
@@ -35,10 +37,10 @@ public class Limb : MonoBehaviour
 
 		mesh.colors = new Color[]
 		{
-							new Color(1.0f, 1.0f, 1.0f, 1.0f),
-							new Color(1.0f, 1.0f, 1.0f, 1.0f),
-							new Color(1.0f, 1.0f, 1.0f, 1.0f),
-							new Color(1.0f, 1.0f, 1.0f, 1.0f)
+							color,
+							color,
+							color,
+							color
 		};
 
 		mesh.triangles = new int[] { 0, 1, 2, 0, 2, 3 };
